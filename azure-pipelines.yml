@@ -7,12 +7,12 @@ trigger:
 -'*'
 
 pool:
-  vmImage: 'ubuntu-20.04'
-  demands:
+ vmImage: 'ubuntu-20.04'
+ demands:
   -npm
 
 variables:
-  buildConfiguration: 'Release'
+ buildConfiguration: 'Release'
 
 steps:
 -task: UseDotNet@2
@@ -48,4 +48,4 @@ inputs:
   command:'build'
   arguments:'--no-restore --configuration Release'
   projects:'**/*.csproj'
-  
+
